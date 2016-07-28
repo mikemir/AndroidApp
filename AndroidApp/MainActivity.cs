@@ -11,7 +11,7 @@ namespace AndroidApp
     [Activity(Label = "AndroidApp", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        int count = 0;
+        int count;
 
         protected override void OnCreate(Bundle bundle)
         {
