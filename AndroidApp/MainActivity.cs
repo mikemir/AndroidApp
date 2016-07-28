@@ -11,7 +11,7 @@ namespace AndroidApp
     [Activity(Label = "AndroidApp", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        int count = 1;
+        int count = 0;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -22,7 +22,7 @@ namespace AndroidApp
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.MyButton);
 
-            button.Click += (o, e) => { button.Text = string.Format("{0} clicks!", count++); };
+            button.Click += (o, e) => { button.Text = string.Format("{0} clicks!", ++count); };
         }
     }
 }
